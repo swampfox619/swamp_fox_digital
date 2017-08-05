@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+      <%= stylesheet_link_tag "application" %>
+      <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700" rel="stylesheet">
+      <title>FlexBox</title>
+  </head>
+  <body>
+      <div>
+          <div class="hero">
+            <header>
+                <div>
+                  <%= image_tag('logo-half', class: 'logo') %>
+                  <h1>Bold planning.  Bolder execution.<br>Building better websites.</h1>
+                </div>
+                <ul>
+                    <li><a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                    <li><a href="www.yelp.com" style="font-size: 2rem;"><i class="fa fa-yelp" aria-hidden="true"></i></li>
+                    <li><a href="www.google.com"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Pricing</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </header>
+          </div>
+            <div class="container">
+              <aside>
+                <article>
+                  <h2>Ready now?</h2>
+                  <div>
+                    <div><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                  </div>
+                </article>
+                <article>
+                  <h2>Mission</h2>
+                  <p> 
+                    As a former contractor and a former Infantry officer, my company, 
+                    <span style="font-family: 'Stardos Stencil'; font-weight: 900;">General Issue</span>, 
+                    exists to serve two clients: small-business owners and veterans.  We build websites 
+                    to help America's craftsmen, tradesmen, and small business-owners, and we give back 
+                    10% of our profits to veteran's organizations.
+                  </p>
+                </article>
+                <article>
+                  <h2>Latest Blog</h2>
+                  <p> 
+                    As a former contractor and a former Infantry officer, my company, 
+                    <span style="font-family: 'Stardos Stencil'; font-weight: 900;">General Issue</span>, 
+                    exists to serve two clients: small-business owners and veterans.  We build websites 
+                    to help America's craftsmen, tradesmen, and small business-owners, and we give back 
+                    10% of our profits to veteran's organizations.
+                  </p>
+                </article>
+              </aside>
+              <main>
+                <section class="main-process">
+                  <h2>Services</h2>
+                  <ul>
+                    <li>
+                      <div><i class="fa fa-pencil" aria-hidden="true"></i></div>
+                      <h3>Web Design</h3>
+                      <p>From layout, logos, image sizing, to colors and content.  <strong>Responive</strong> designs that work on laptops, tablets, and phones.</p>
+                    </li>
+                    <li>
+                      <div><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+                      <h3>Web Development</h3>
+                      <p>Hard coding the look, feel, and interactivity your clients expect from a modern <strong>mobile-friendly</strong> website.</p>
+                    </li>
+                    <li>
+                      <div><i class="fa fa-map-o" aria-hidden="true"></i></div>
+                      <h3>Content Strategy</h3>
+                      <p>You've invested in a custom web-site to differentiate yourself.  The next step is a content-marketing strategy to attract clients over time</p>
+                    </li>
+                  </ul>
+                </section>
+                <section class="main-process">
+                  <h2>Process</h2>
+                  <ul>
+                    <li>
+                      <div><i class="fa fa-exchange" aria-hidden="true"></i></div>
+                      <h3>Initial Discovery</h3>
+                      <p>We'll review your budget, initial ideas, and goals for your website.  Sometimes a DIY site may make more sense; other times, a custom solution is best.  It all depends on where you are at in your business's life</p>
+                    </li>
+                    <li>
+                      <div><i class="fa fa-desktop" aria-hidden="true"></i></div>
+                      <h3>Iterative Prototyping</h3>
+                      <p>We'll work through prototypes and mockups to ensure our solution is the one you envisioned, until you have a website that epitomizes your brand.</p>
+                    </li>
+                    <li>
+                      <div><i class="fa fa-keyboard-o" aria-hidden="true"></i></div>
+                      <h3>Website Launch</h3>
+                      <p>Once the design and development are complete, we'll walk your through your new site, your content management platform, and your selected content-marketing strategy</p>
+                    </li>
+                  </ul>
+                </section>
+              </main>
+            </div>  
+          </div>
+          <footer>
+            <%= image_tag('logo-quarter', class: 'footer-logo logo') %>
+            <ul>
+                <li><a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><a href="www.yelp.com" style="font-size: 2rem;"><i class="fa fa-yelp" aria-hidden="true"></i></li>
+                <li><a href="www.google.com"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+          </footer>
+      </div>
+  </body>
+</html>

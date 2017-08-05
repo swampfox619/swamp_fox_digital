@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css?family=Stardos+Stencil');
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// COLOR VARIABLES:
+    $light-tan: #FFF8E3;
+    $gray-tan: #7F7C72;
+    $tan: #CCB879;
+    $font: 'Stardos Stencil', cursive;
+
+// WHOLE PAGE STYLES:
+
+    h1, h2, h3, h4, header li, footer li {
+        font-family: $font;
+        font-weight: 900;
+    }
+
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-image: url(camo2.jpg);
+    }
+
+//FLEX LAYOUTS
+
+// HEADER AND FOOTER:
+
+    header, footer {
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, .85);
+        color: white;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-end;
+            list-style: none;
+            li{
+                font-size: 1.5rem;
+                .fa {
+                    font-size: 2rem;
+                }
+            }
+            
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        
+    }
+    
+    //HEADER:
+    
+    header {
+        height: 40rem;
+        h1{
+            color: white;
+            margin-top: 200px;
+            text-align: left;
+            padding-left: 50px;
+        }
+        ul {
+            flex: 1;
+            justify-content: flex-end;
+            margin-bottom: 0;
+            li {
+                margin-bottom: 0;
+                padding: 2rem;
+                &:nth-child(n+6):hover {
+                    background-color: $light-tan;
+                    border-radius: 5px 0 0 0;
+                    a{
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .hero {
+        height: 100%;
+        width: 100%;
+        background-image: url(eisenhower.jpg);
+        z-index: 10;
+        background-size: cover;
+    }
+
+// FOOTER
+    
+    footer {
+        padding: 1rem 0;
+        align-items: center;
+        opacity: .85;
+        .footer-logo{
+            padding-bottom: 1reml;
+        }
+        ul{
+            justify-content: center;
+            li {
+                padding-right: 3rem;
+                a:hover {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+    
+    .container {
+        display: flex;
+        background-color: $light-tan;      
+        opacity: .85;
+        width: 100%;
+    }
+    
+    aside {
+        flex: 1;
+        padding: 2rem 0;
+        article{
+            margin-bottom: 5rem;
+            h2{
+                padding-bottom: 2rem;
+            }
+            div{
+                display: flex;
+                font-size: 3rem;
+                padding-right: 3rem;
+            }
+        }
+    }
+    
+    main {
+        flex: 4;
+        display: flex;
+        flex-flow: column;
+        width: 80%;
+        margin: 0 5rem;
+        padding: 3rem 0;
+    
+        h2 {
+            text-align: center;
+            border-bottom: .25rem solid black;
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        ul{
+            display: flex;
+            list-style: none;
+            justify-content: space-between;
+            li{
+                flex: 1;
+                border: 1px solid black;
+                margin: 1rem;
+                color: black;
+                background: $tan;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                padding: 3rem;
+                div{
+                    font-size: 5rem;
+                }
+                h3{
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    .logo{
+        height: 100px;
+        width: 100px;
+    }
