@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
+  root 'welcome#index'
+
   get 'products/index'
 
   resources :blogs;
 
-  root 'welcome#index'
 
   get 'welcome/about'
 
