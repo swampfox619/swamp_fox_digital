@@ -1,0 +1,24 @@
+<div style="width: 80%; padding 1rem; margin: 0 auto;">
+  <section>
+    <h3>Know what you want?</h3>
+    <div>
+      <div><i class="fa fa-phone" aria-hidden="true"></i></div>
+      <div><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+    </div>
+  </section>
+  <section>
+    <h3>Mission</h3>
+    <p> 
+      As a former contractor and Army Infantryman, 
+      <span style="font-family: 'Stardos Stencil'; font-weight: 900;">General Issue</span>, 
+      exists to serve two clients: America's small business owners and veterans.  We build websites 
+      to help America's craftsmen and tradesmen, and we give back 
+      10% of our profits to veteran's organizations.
+    </p>
+  </section>
+  <section>
+    <h3>Latest Blog:</h3>
+    <h4><%= "#{Blog.last.title}" %></h4>
+    <p> <%= markdown(truncate(Blog.last.body, length: 300){"[read more](#{blog_path(Blog.last)})"}) %></p>
+  </section>
+</div>

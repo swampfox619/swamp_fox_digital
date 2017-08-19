@@ -1,0 +1,44 @@
+<%= render 'layouts/nav' %>
+<div class="container">
+    <aside><%= render 'layouts/aside' %></aside>
+    <main>
+        <section class="blog">
+            <h1>The GI Blog:  <span><%= link_to "New Blog post", new_blog_path, class: 'btn btn-primary' %></span></h1> 
+            <div class="blog-admin-panel">
+                <h2>Blog Admin Panel:</h2>
+                <table>
+                    <tr>
+                        <th>Title:</th>
+                        <th>Date:</th>
+                        <th>Show:</th>
+                        <th>Edit:</th>
+                        <th>Delete:</th>
+                    </tr>
+                    <% @blogs.each do |blog| %>
+                    <tr>
+                       <td><%= blog.title %></td>
+                       <td><%= blog.created_at.strftime("%B %e, %Y") %></td>
+                       <td><%= link_to "Show", blog_path(blog.id) %></td>
+                       <td><%= link_to "Edit", edit_blog_path(blog.id) %></td>
+                       <td><%= link_to "Destroy", blog_path(blog.id), :method => :delete, :confirm => "Are you sure?" %></td>
+                    </tr>
+                    <% end %>
+                </table>
+            </div>
+            <div class="blog-user-panel">
+                <h2>Blog User Panel:</h2>
+                <% @blogs.each do |blog| %>
+                <div class="blog-list">
+                    <div style="width: 100%;">
+                        <h2><%= blog.title %></h2>
+                        <h4>Published on: <%= blog.created_at.strftime("%B %e, %Y") %></h4>
+                    </div>
+                    <div style="padding: 2rem;">
+                        <%= markdown(blog.body[0,200] + "...") %>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+        </section>
+    </main>
+</div> 

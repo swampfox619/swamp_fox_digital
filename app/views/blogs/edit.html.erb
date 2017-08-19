@@ -1,0 +1,40 @@
+<%= render 'layouts/nav' %>
+<div class="container">
+    <aside>
+        <%= render 'layouts/aside' %>
+    </aside>
+    <main>
+        <section class="main-process" style="display: flex; flex-direction: column; align-items: center;">
+            <h2>Edit Blog Post</h2>
+            <div style="width: 100%; border: 3px solid black;">
+                <div class="container" style="display: flex; flex-direction: column; align-items: center; padding: 3rem;">
+                    <%= form_for @blog do |f| %>
+                    <div class="row">
+                        <div class="col-sm-1" style="padding-bottom: 3rem;">
+                            <%= f.label :title %>    
+                        </div>
+                        <div class="col-sm-11">
+                            <%= f.text_field :title %>    
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <%= f.label :body %>
+                        </div>
+                        <div class="col-sm-11">
+                            <%= f.text_area :body, size: "100x20" %>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                        </div>
+                        <div class="col-sm-6">
+                            <%= f.submit "Save", class: 'btn btn-success' %>
+                        </div>
+                    </div>
+                    <% end %>
+                </div>
+            </div>
+        </section>
+    </main>
+</div> 

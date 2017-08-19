@@ -1,4 +1,4 @@
-class BlogController < ApplicationController
+class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
@@ -13,7 +13,7 @@ class BlogController < ApplicationController
   end
 
   def create
-    @blog = Blog.new
+    @blog = Blog.new(blog_params)
     
     if @blog.save
       flash[:notice] = "Blog post was saved."
@@ -42,6 +42,7 @@ class BlogController < ApplicationController
   
   def destroy
     @blog = Blog.find(params[:id])
+    @blog.destroy
     
     if @blog.destroy
       flash[:notice] = "Your #{@blog.title} was deleted."

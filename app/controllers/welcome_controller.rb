@@ -1,14 +1,15 @@
 class WelcomeController < ApplicationController
-  def index
-  end
-
+  
   def about
   end
   
   def contact
   end
+
+  def index
+  end
   
-  def pricing
+  def seo
   end
   
 end

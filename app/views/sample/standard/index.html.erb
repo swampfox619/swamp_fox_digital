@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+      <%= stylesheet_link_tag "application" %>
+      <%= javascript_include_tag "application.js" %>
+      <%= csrf_meta_tag %>
+      <link href="https://fonts.googleapis.com/css?family=Stardos+Stencil:700" rel="stylesheet">
+      <title>Sample</title>
+  </head>
+  <body>
+      <div>
+          <footer>
+            <%= link_to image_tag('logo-half', class: 'logo'), root_path %>
+            <ul>
+                <li><a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                <li><a href="www.yelp.com" style="font-size: 2rem;"><i class="fa fa-yelp" aria-hidden="true"></i></li>
+                <li><a href="www.google.com"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+                <li><%= link_to 'About', about_path %></li>
+                <li><a href="#">Gallery</a></li>
+                <li><%= link_to 'Products', pricing_path %></li>
+                <li><%= link_to 'Blog', blogs_path %></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+          </footer>
+      </div>
+  </body>
+</html>

@@ -1,47 +1,45 @@
-<div class="row" style="padding: 0">
-    <section style="padding: 0 50px; width: 80%; margin: 0 auto;">
-        <h1 style="text-align: center;">About Us</h1>
-        <div class = "row">
-            <h2 style="border-bottom: 2px solid black">Our History</h2>
-            <div class= "col-md-8">
-                <p>In nec felis vel tortor interdum ullamcorper. Vestibulum iaculis, 
-                neque vitae scelerisque condimentum, ipsum purus feugiat felis, sagittis 
-                dictum ligula massa ut augue. Fusce elementum, tellus eu euismod porta, 
-                dolor metus varius nisi, eu interdum augue augue et augue. Etiam luctus 
-                dolor eget est placerat, in feugiat nisl vehicula. Pellentesque facilisis 
-                faucibus erat, in fermentum sem sagittis sed. Duis mollis metus vel nisl 
-                pulvinar pharetra.  </p>
+<%= render 'layouts/nav' %>
+<div class="container">
+    <aside><%= render 'layouts/aside' %></aside>
+    <main>  
+        <h1>About Us</h1>
+        <section class="about">
+            <div class="about-heading">
+                <h2>A Little History</h2>
             </div>
-            <div class="col-md-4">
-                <%= image_tag("boone.jpg", size: "200x200", :alt => "Boone, North Carolina") %>
+            <div class="about-content">
+                <p>Before starting <span style="font-family: 'Stardos Stencil'; font-weight: 900;">
+                General Issue</span>, Lew was an Army infantry officer and landscape 
+                contractor.</p>  
+                <p>As a contractor, he was constantly bombarded with calls from shady internet marketers 
+                and web-design hucksters. He spent $1,000s on the latest tech tools and fads, often with zero 
+                results.</p>
+                <p>When he relocated to North Carolina, he realized craftsmen and contractors needed a reliable,
+                honest, and knowledgeable web-design partner. He decided to open General Issue to help meet 
+                this need.</p>    
             </div>
-        </div>
-         <div class = "row">
-            <h2 style="border-bottom: 2px solid black">Our Namesake</h2>
-            <div class="col-md-4">
-                <%= image_tag("swampfox.jpg", size: "200x200", :alt => "The Swamp Fox") %>
+        </section>
+        <section class="about">
+            <div class="about-heading">
+                <h2>Our Mission</h2>
             </div>
-            <div class="col-md-8">
-                <p>In nec felis vel tortor interdum ullamcorper. Vestibulum iaculis, 
-                neque vitae scelerisque condimentum, ipsum purus feugiat felis, sagittis 
-                dictum ligula massa ut augue. Fusce elementum, tellus eu euismod porta, 
-                dolor metus varius nisi, eu interdum augue augue et augue. Etiam luctus 
-                dolor eget est placerat, in feugiat nisl vehicula. Pellentesque facilisis 
-                faucibus erat, in fermentum sem sagittis sed. </p>    
+            <div class="about-content">
+                <p>General Issue exists to help America's tradesmen, craftsmen and artisans achieve 
+                success with 21st century websites and web applications.  We also help those who have 
+                served America by giving 10% of our profits to veteran's organizations.</p>
+                <p>If you're looking for solutions to help your business get to greener pastures in the 
+                digital space, we can help.</p>    
             </div>
-        </div>
-         <div class = "row">
-            <h2 style="border-bottom: 2px solid black">Meet the Founder</h2>
-            <div class="col-md-8">
-                <p>In nec felis vel tortor interdum ullamcorper. Vestibulum iaculis, 
-                neque vitae scelerisque condimentum, ipsum purus feugiat felis, sagittis 
-                dictum ligula massa ut augue. Fusce elementum, tellus eu euismod porta, 
-                dolor metus varius nisi, eu interdum augue augue et augue. Etiam luctus 
-                dolor eget est placerat, in feugiat nisl vehicula. </p>
+        </section>
+        <section class="about">
+            <div class="about-heading">
+                <h2>Location:</h2>
             </div>
-            <div class="col-md-4">
-                <%= image_tag("HannahAndI.jpg", size: "200x200", :alt => "Hannah and Dad") %>
+            <div class="about-content flex">
+                <div class="about-content image"><img src="http://maps.google.com/maps/api/staticmap?center=Boone,NC&zoom=12&size=300x300" alt="Boone, NC"></img></div>
+                <p>We're located in the heart of the High Country in Boone, Western North Carolina, home of 
+                the App State Mountaineers.  We help clients throughout the US.</p>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </div>
