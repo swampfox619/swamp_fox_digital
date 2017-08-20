@@ -17,8 +17,10 @@
     </p>
   </section>
   <section>
-    <h3>Latest Blog:</h3>
-    <h4><%= "#{Blog.last.title}" %></h4>
-    <p> <%= markdown(truncate(Blog.last.body, length: 300){"[read more](#{blog_path(Blog.last)})"}) %></p>
+    <% if Blog.last %>
+      <h3>Latest Blog:</h3>
+      <h4><%= "#{Blog.last.title}" %></h4>
+      <p> <%= markdown(truncate(Blog.last.body, length: 300){"[read more](#{blog_path(Blog.last)})"}) %></p>
+    <% end %>
   </section>
 </div>
