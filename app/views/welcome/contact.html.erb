@@ -78,16 +78,18 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
         </section>
-        <section style="display: flex;">
-            <div style=" flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 3rem; border-right: 2px dotted black;">
-                <h2>Next Step:</h2>
-                <p>Click here to see our full process from start to finish.</p>
-            </div>
-            <div style="flex: 2; display: flex; flex-direction: column; align-items: center; padding: 0 5rem;">
-                <div style="font-size: 5rem;"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                <h4>Initial Consultation</h4>
-                <p>We'll review your website goals, target audience, talk design and budget to make sure we're the right company for you.</p>
-            </div>
-        </section>
+        <%= link_to process_path, style: 'color: black; text-decoration: none;' do %>
+            <section style="display: flex;">
+                <div style=" flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 3rem; border-right: 2px dotted black;">
+                    <h2>Next Step:</h2>
+                    <p>Click here to see our full process from start to finish.</p>
+                </div>
+                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; padding: 0 5rem;">
+                    <div style="font-size: 5rem;"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <h4>Initial Consultation</h4>
+                    <p>We'll review your website goals, target audience, talk design and budget to make sure we're the right company for you.</p>
+                </div>
+            </section>
+        <% end %>
     </main>
 </div>

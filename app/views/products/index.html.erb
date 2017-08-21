@@ -1,9 +1,9 @@
 <%= render 'layouts/nav' %>
 <div class="container">
-    <aside><%= render 'layouts/aside' %></aside>
+    <aside><%= render 'products' %></aside>
     <main>        
         <h1>Website Packages:</h1>
-        <%= link_to general_issue_path do %>
+        <%= link_to general_issue_path, style: 'color: black; text-decoration: none;' do %>
         <section class="template">
             <div class="template-left">
                 <div class="template-left-top">
@@ -34,7 +34,7 @@
             </div>
         </section>
         <% end %>
-        <%= link_to craftsman_path do %>
+        <%= link_to craftsman_path, style: 'color: black; text-decoration: none;' do %>
         <section class="template">
             <div class="template-left">
                 <div class="template-left-top">
@@ -66,7 +66,7 @@
             </div>
         </section>
         <% end %>
-        <%= link_to artisan_path do %>
+        <%= link_to artisan_path, style: 'color: black; text-decoration: none;' do %>
         <section class="template">
             <div class="template-left">
                 <div class="template-left-top">
