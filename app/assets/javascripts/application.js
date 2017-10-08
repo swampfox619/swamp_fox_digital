@@ -15,25 +15,3 @@
 //= require bootstrap
 //= require_tree .
 
-$(document).on("turbolinks:load", function(){
-
-        $('.services').css({
-            opacity    : 0,
-            transform  : 'scale(.8)',
-        });
-    
-
-        $(window).scroll(function(){
-            var hT = $('.services').offset().top,
-                hH = $('.services').outerHeight(),
-                wH = $(window).height(),
-                wS = $(this).scrollTop();
-            if (wS > (hT+hH-wH)){
-                $('.services').css({
-                    opacity    : 1,
-                    transform  : 'scale(1)',
-                    transition : 'opacity 1s, transform 1s'
-                });
-            };
-        });
-})
