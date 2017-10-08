@@ -14,6 +14,14 @@
       <title>General Issue</title>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <header>
       <div class="container">
         <div class="logo">
@@ -30,9 +38,10 @@
             <li><a href="www.yelp.com" style="font-size: 2rem;"><i class="fa fa-yelp" aria-hidden="true"></i></li>
             <li><a href="www.google.com"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
         </ul>
-        <div style="padding: 2rem 0 0 2rem;" class="fb-like" data-href="https://generalissuehomepage.herokuapp.com/" 
-        data-width="50" data-layout="standard" data-action="like" data-size="small" 
-        data-show-faces="true" data-share="true"></div>
+        <div class="fb-like" data-href="https://generalissuehomepage.herokuapp.com/"
+            data-width="50" data-layout="button" data-action="like" data-size="small" 
+            data-show-faces="false" data-share="true">
+        </div>
       </div>
     </header>
     <div class="main-content">
