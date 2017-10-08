@@ -1,6 +1,12 @@
 <h1 class="page-heading">The GI Blog:  
-<span><%= link_to "New Blog post", new_blog_path, class: 'btn btn-primary' %></span>
+<!--<span><%= link_to "New Blog post", new_blog_path, class: 'btn btn-primary' %></span>-->
 </h1>
+<p style="width: 90%; margin: 0 auto; padding: 1rem;">The GI Blog focuses on the latest online marketing developments for small businesses and 
+how you can leverage proven strategies and insights to maximize the return on your marketing dollar.</p>
+<div style="width: 90%; margin: 0 auto; padding: 1rem 4rem" class="fb-like" data-href= "https://generalissuehomepage.herokuapp.com/blogs/"
+    data-width="50" data-layout="button" data-action="like" data-size="small" 
+    data-show-faces="false" data-share="true">
+</div>
 <div class="blog">
     <div class="blog-latest">
         <% @blogs.reverse.each do |blog| %>
