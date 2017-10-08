@@ -1,5 +1,5 @@
 <h1 class="page-heading">The GI Blog:  
-<!--<span><%= link_to "New Blog post", new_blog_path, class: 'btn btn-primary' %></span>-->
+<span><%= link_to "New Blog post", new_blog_path, class: 'btn btn-primary' %></span>
 </h1>
 <div class="blog">
     <div class="blog-latest">
@@ -8,7 +8,7 @@
             <div style="width: 100%;">
                 <h2><%= blog.title %></h2>
                 <h4>Published on: <%= blog.created_at.strftime("%B %e, %Y") %></h4>
-                <div class="fb-like" data-href="https://generalissuehomepage.herokuapp.com/" 
+                <div class="fb-like" data-href='https://generalissuehomepage.herokuapp.com/blogs/#{blog.id}'
                 data-width="50" data-layout="standard" data-action="like" data-size="small" 
                 data-show-faces="true" data-share="true"></div>
             </div>
