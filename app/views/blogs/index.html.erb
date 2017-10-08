@@ -8,6 +8,9 @@
             <div style="width: 100%;">
                 <h2><%= blog.title %></h2>
                 <h4>Published on: <%= blog.created_at.strftime("%B %e, %Y") %></h4>
+                <div class="fb-like" data-href="https://generalissuehomepage.herokuapp.com/" 
+                data-width="50" data-layout="standard" data-action="like" data-size="small" 
+                data-show-faces="true" data-share="true"></div>
             </div>
             <div class="blog-show">
                 <%= markdown(blog.body) %>
