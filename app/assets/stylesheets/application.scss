@@ -6,6 +6,58 @@
 @import "normalize-rails";
 @import 'ionicons';
 
+// CSS Reset
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
 // COLOR VARIABLES:
     $light-tan: #FFF8E3;
     $gray-tan: #7F7C72;
@@ -14,316 +66,263 @@
 
 // WHOLE PAGE STYLES:
 
-    h1, h2, h3, h4, header li, footer li {
+    h1, h2, header li {
         font-family: $font;
-        font-weight: 900;
-    }
-    p, li {
-        font-size: 1.5rem;
     }
 
-    body {
-        margin: 0;
-        padding: 0;
+    body{
+        height: 100%;
+        min-height: 1000px;
+    }
+
+//LEFT NAV:
+
+    header{
+        width: 20%;
+        position: fixed;
+        height: 100%;
+        min-height: 1000px;
         background-image: url(camo2.jpg);
-    }
-    
-    .container {
-        display: flex;
-        background-color: $light-tan;      
-        opacity: .85;
-        width: 100%;
-        justify-content: center;
-    }
-
-// HEADER AND FOOTER:
-
-    header, footer {
-        display: flex;
-        flex-direction: column;
-        background-color: rgba(0, 0, 0, .85);
-        color: white;
-        ul{
-            display: flex;
-            flex-wrap: wrap;
-            align-items: flex-end;
-            list-style: none;
-            li{
-                font-size: 1.5rem;
-                .fa {
-                    font-size: 2rem;
-                }
+        .container{
+            padding: 2rem;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.9);
+            .logo{
+                margin: 0 auto;
+                height: 100px;
+                width: 100px;
             }
-            
-        }
-        a{
-            color: white;
-            text-decoration: none;
-        }
-        
-    }
-    
-    header {
-        height: 40rem;
-        h1{
-            color: white;
-            margin-top: 200px;
-            text-align: left;
-            padding-left: 50px;
-        }
-        ul {
-            flex: 1;
-            justify-content: flex-end;
-            margin-bottom: 0;
-            li {
-                margin-bottom: 0;
-                padding: 2rem;
-                &:nth-child(n+6):hover {
-                    background-color: $light-tan;
-                    border-radius: 5px 0 0 0;
-                    a{
-                        color: black;
+            ul{
+                margin: 0 auto;
+                width: 80%;
+                
+            }
+            li{
+                list-style: none;
+                font-size: 1rem;
+            }
+            .links{
+                padding-top: 2rem;
+                li{
+                margin: 1rem 0;
+                padding: 1rem 0;
+                border-bottom: 1px solid white;
+                &:hover{
+                    transform: scale(1.1);
+                    transition: transform 300ms;
                     }
                 }
             }
+            .social{
+                display: flex;
+                padding-top: 2rem;
+                li{
+                    padding: 0 1rem;
+                }
+            }
+            a{
+                color: white;
+                text-decoration: none;
+                &:hover{
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            div{
+                color: white;
+            }
         }
+    }
+    
+//BODY CONTENT:
+
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    h3{
+        font-size: 1.25rem;
+    }
+
+    .main-content{
+        width: 80%;
+        float: right;
+        background: $tan;
+        padding: 2rem;
+        min-height: 1000px;
     }
 
     .hero {
-        height: 100%;
-        width: 100%;
-        background-image: url(eisenhower.jpg);
-        z-index: 10;
-        background-size: cover;
-    }
-
-    footer {
-        padding: 1rem 0;
-        align-items: center;
-        .footer-logo{
-            padding-bottom: 1reml;
-        }
-        ul{
-            justify-content: center;
-            li {
-                padding-right: 3rem;
-                a:hover {
-                    text-decoration: none;
-                    color: white;
-                }
+        width: 80%;
+        margin: 0 auto;
+        background-image: url('eisenhower');
+        background-size: 100%;
+        outline: 1px solid black;
+        outline-offset: 3px;
+        .filter{
+            background: rgba(0,0,0,.8);
+            height: 500px;
+            width: 100%;;
+            color: white;
+            h1 {
+                padding-top: 20rem;
+                width: 95%;
             }
-        }
-    }
-
-//BODY CONTENT:
-
-    aside {
-        flex: 1;
-        padding: 2rem 0;
-        section{
-            margin-bottom: 5rem;
             h2{
-                padding-bottom: 2rem;
+                padding-top: 1rem;
+                width: 70%;
             }
-            div{
-                display: flex;
-                font-size: 3rem;
-                padding-right: 3rem;
+            h1, h2{
+                padding-left: 2rem;
+            }
+        }
+    }  
+    .hero.services{
+        background-image: url('infographic');
+    }
+    .home-content{
+        padding: 2rem 0;
+        display: flex;
+        .home-third, .home-half{
+            flex: 1;
+            margin: 1rem;
+            h2{
+                border-bottom: 1px solid black;
+                margin-bottom: 1rem;
+            }
+            ul{
+                padding-top: 1rem;
+                list-style: initial;
+                margin-left: 1rem;
             }
         }
     }
 
-    main{
-        flex: 4;
-        padding: 1rem 0;
-        h1{
-            margin: 3rem auto;
-            width: 90%;
-        }
-        article{
-            margin: 3rem auto;
-            padding: 1rem;
-            width: 80%;
+    .home-testimonial{
+        display: flex;
+        margin: 1rem;
+        .image{
+            flex: 1;
             display: flex;
-            h3{
-                flex: 3;
-            }
-            p{
-                flex: 5;
+            align-items: center;
+            flex-direction: column;
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 25px;
             }
         }
-        section{
-            margin: 3rem auto;
-            width: 80%;
-            padding: 1rem;
-            background: $tan;
-            .page-heading{
-                font-size: 3rem;
+        .text{
+            flex: 7;
+            h2{
+                border-bottom: 1px solid black;
+                margin-bottom: .5rem;
             }
-            .content-column{
-                display: flex;
-                justify-content: center;
-                div{
-                    padding: 1rem;
-                }
+        }
+    }
+
+    .home-blog{
+        display: flex;
+        margin: 1rem;
+        h2{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+        .text{
+            flex: 7;
+            h3{
+                border-bottom: 1px solid black;
+                margin-bottom: .5rem;
             }
+        }
+    }
+
+
+    .services-image{
+        width: 100%;
+        text-align: center;
+        img{
+            width: 700px;
+            outline: 1px solid black;
+            outline-offset: 3px;
+        }
+    }
+
+    .page-heading{
+        padding: 2rem 1rem 0 1rem;
+    }
+    
+    .contact-page{
+        width: 60%;
+        margin: 2rem auto;
+        background-image: url('eisenhower');
+    }
+    .contact-form{
+        background: rgba(0,0,0,.8);
+        width: 100%;
+        margin: 0 auto;
+        padding: 2rem;
+        color: white;
+        h3{
+            margin-bottom: 2rem;
+        }
+        label{
+            margin-bottom: 1rem;
         }
     }
     
-    .logo{
-        height: 100px;
-        width: 100px;
+    .next-step{
+         display: flex; 
+         border: 1px solid white; 
+         padding: 1rem; 
+         border-radius: 5px; 
+         margin-bottom: 1rem;
+         .next-step-1{
+             flex: 1;
+         }
+         .next-step-2{
+             flex: 1;
+             font-size: 3rem;
+         }
+         .next-step-3{
+             flex: 4;
+             h3{
+                 display: inline;
+             }
+         }
     }
 
-//PRODUCTS PAGE
-
-    .template{
-        display: flex;
-        padding: 3rem 0;
-        .template-left{
-            padding: 0 3rem;
-            flex: 2;
-            border-right: 2px dotted black;
-            .template-left-top{
-                display: flex;
-                div{
-                    padding-left: 3rem;
-                }
-            }
-        }
-        .template-right{
-            padding: 0 3rem;
-            flex: 3;
-            .template-right-inside{
-                display: flex;
-                padding: 1rem;
-                ul{flex: 3;}
-            }
-            h3{
-                margin: 0;
-                flex: 1;
-            }
-        }
+//BLOG
+.blog{
+    padding: 2rem 0;
+    h2{
+        margin-bottom: 2rem;
     }
-    .products-management{
-        display: flex;
-        align-items: center;
-        .products-management-left{flex: 2;}
-        .products-management-right{flex: 3;}
-    }
-
-//PROCESS PAGE:
-
-    .process{
-        display: flex;
-        justify-content: center;
-        .process-heading{
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-right: 2px dotted black;
-            padding: 3rem;
-            div{
-                font-size: 5rem;
-            }
+    .blog-latest{
+        margin: 1rem;
+        .blog-list{
+            border-top: 1px solid black;
+            padding: 2rem 0;
         }
-        .process-content{
-            flex: 3;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .blog-show{
             padding: 2rem;
         }
-        .process-content2{
-            flex: 6;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2rem 4rem;
+    }
+    .blog-admin-panel{
+        width: 100%;
+        margin: 1rem;
+        table{
+            padding: 1rem;
         }
-        #develop{
-            justify-content: center;
+        th, td {
+            padding: 1rem;
+            border: 1px solid black;
         }
     }
-
-//HOME PAGE:
-    .welcome{
-        display: flex;
-        .one{
-            flex: 1;
-        }
-        .two{
-            flex: 2;
-        }
-        .welcome-heading{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 0 3rem;
-            border-right: 2px dotted black;
-        }
-        .welcome-column{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 0 5rem;
-            div{
-                font-size: 5rem;
-            }
-        }
-    }
-
-//ABOUT
-    .about{
-        display: flex;
-        .about-heading{
-            flex: 1;
-            border-right: 2px dotted black;
-            display: flex;
-            padding: 0 3rem;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .about-content{
-            flex: 4;
-            padding: 0 3rem;
-        }
-        .image{
-            text-align: center;
-        }
-        .flex{
-            display: flex;
-            align-items: center;
-        }
-    }
-//STANDARD
-    .standard{
-        display:flex;
-        .standard-heading{
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 0 3rem;
-            border-right: 2px dotted black;
-            div{
-                font-size: 5rem;
-            }
-        }
-        .standard-content{
-            padding: 3rem;
-            flex: 4;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            h3, p{
-                padding: 2rem;
-            }
-        }
-    }
-
-    
+}

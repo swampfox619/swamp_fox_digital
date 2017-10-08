@@ -1,57 +1,45 @@
-<%= render 'layouts/hero' %>
-<div class="container">
-    <aside><%= render 'layouts/aside' %></aside>
-    <main>
-        <h1>Because contractors and craftsmen deserve a better website.</h1>
-        <section class="welcome">
-            <div class="welcome-heading">
-                <h2>Website Packages</h2>
-                <h4>Starting at $3999</h4>
-            </div>
-            <div class="welcome-column one">
-                <div><i class="ion ion-map" aria-hidden="true"></i></div>
-                <h4>Starting out?</h4>
-                <p>A simple & professional online footprint may be in order.</p>
-            </div>
-            <div class="welcome-column one">
-                <div><i class="ion ion-arrow-graph-up-right" aria-hidden="true"></i></div>
-                <h4>Expanding your online presence?</h4>
-                <p>From selling online to a more engaged customer experience.</p>
-             </div>
-        </section>
-        <section class="welcome">
-            <div class="welcome-heading">
-                <h2>Excellence is standard issue</h2>
-                <p>Included in every single one of our custom websites.</p>    
-            </div>
-            <div class="welcome-column one">
-                <div><i class="fa fa-search" aria-hidden="true"></i></div>
-                <h4>SEO on Every Page</h4>
-                <p>Google keywords hard-coded under the hood.</p>
-            </div>
-            <div class="welcome-column one">
-                <div><i class="fa fa-mobile" aria-hidden="true"><i class="fa fa-tablet" aria-hidden="true"></i><i class="fa fa-desktop" aria-hidden="true"></i></i></div>
-                <h4>100% Responsive Design</h4>
-                <p>Your website will look great on any device</p>
-            </div>
-        </section>
-        <section class="welcome">
-            <div class="welcome-heading">
-                <h2>Next Step:</h2>
-                <p>Give us a call or fill out a form</p>
-            </div>
-            <div class="welcome-column one">
-                <div><i class="fa fa-phone" aria-hidden="true"></i></div>
-                <h4>Contact Us</h4>
-                <p>From initial consultation to contract signing, we'll review your website goals, target audience,
-                and talk design</p>
-            </div>
-            <div class="welcome-column one">
-                <div><i class="fa fa-exchange" aria-hidden="true"></i></div>
-                <h4>Initial Discovery</h4>
-                <p>From initial consultation to contract signing, we'll review your website goals, target audience,
-                and talk design</p>
-            </div>
-        </section>
-    </main>
+<div class="hero">
+    <div class="filter">
+        <h1>Digital marketing for veteran business owners.</h1>
+        <h2>We craft online-marketing solutions for those who lean forward in the foxhole.</h2>
+    </div>
+</div>
+<div class="home-content">
+    <div class="home-third">
+        <h2>About</h2>
+        <p>General Issue exists to serve veteran-owned small businesses.  From SEO to PPC and beyond, we're here to help you grow your own
+        slice of the American dream.  Oh, and we also give back 10% of our profits to veteran's causes. </p>
+    </div>
+    <div class="home-third">
+        <h2>Services</h2>
+        <p>We stayed laser-focused on only four areas of service to deliver consistent top-tier results:</p>
+        <ul>
+            <li>Digital Branding & Strategy</li>
+            <li>Search Engine Optimization (SEO)</li>
+            <li>Pay-Per-Click (PPC) Advertising</li>
+            <li>Social Media Advertising</li>
+        </ul>
+    </div>
+    <div class="home-third">
+        <h2>The G.I. Blog:</h2>
+        <h3><%=  "\"#{Blog.last.title}:\"" %></h3>
+        <br>
+        <p><%= markdown(truncate(Blog.last.body, length: 200){"[read more](#{blogs_path})"}) %></p>
+    </div>
+    <div class="home-third">
+        <h2>Contact</h2>
+        <p>When you're ready to get started, feel free to reach out to us.  The next step would be our free-initial consultation.</p>
+    </div>
+</div>
+<div class="home-testimonial">
+    <div class="image">
+        <%= image_tag ('face') %>
+        <p>Shaun P.</p>    
+    </div>
+    <div class="text">
+        <h2>What People Are Saying:</h2>
+        <p>"These guys are the real deal.  I signed up with General Issue because, I too, like supporting veteran-owned businesses, and they didn't
+        disappoint.  They'll guide you through the whole online marketing process from start to finish.  Super happy with my experience so far,
+        and I'm getting more leads than ever from the internet."</p>
+    </div>
 </div>

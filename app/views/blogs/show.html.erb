@@ -1,8 +1,5 @@
-<%= render 'layouts/nav' %>
+
 <div class="container">
-    <aside>
-        <%= render 'layouts/aside' %>
-    </aside>
     <main>
         <section class="blog-show">
             <h2><%= "#{@blog.title}" %></h2><span><%= link_to "Edit", edit_blog_path(@blog.id) %></span>

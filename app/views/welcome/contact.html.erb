@@ -1,95 +1,95 @@
-<%= render 'layouts/nav' %>
-<div class="container">
-    <aside><%= render 'layouts/aside' %></aside>
-    <main>
-        <h1>Contact:</h1>
-        <section style="text-align: center;">
-            <h2>Call Now: (619)392-9068</h2>
-            <h3>Or fill out the form below and we'll contact you:</h3>
-        </section>
-        <section>
-            <form class="contact-form">
-                <div class="form-group">
-                    <h3>Contact Info:</h3>
-                    <div class="form-group">
-                        <label>Name</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
-                    </div>
-                    <div class="form-group">
-                        <label>Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label>Phone Number</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your phone number">
-                        <small class="form-text text-muted">Neither will we share your phone number.</small>
-                    </div>
+<h1 class="page-heading">Contact Us:</h1>
+<div class="contact-page">
+    <form class="contact-form">
+        <div class="form-group">
+            <h3>Contact Info:</h3>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your name">
                 </div>
-                    <h3>Project Info:</h3>
-                    <div class="form-group">
-                        <label> Tell us about your project</label>
-                        <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Tell us a bit about your organization's needs"></textarea>
+                <div class="col-sm-6 form-group">
+                    <label>Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 form-group">
+                    <label>Phone Number</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter your phone number">
+                    <small class="form-text text-muted">Neither will we share your phone number.</small>
+                </div>
+            </div>
+        </div>
+            <h3>Project Info:</h3>
+            <div class="form-group">
+                <label> Tell us about your project</label>
+                <textarea class="form-control" id="exampleTextarea" rows="5" placeholder="Tell us a bit about your vision"></textarea>
+            </div>
+            <div class="form-bottom row">
+                <fieldset id="completion" class="form-group col-md-6">
+                    <label>Which best describes your business:</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="completion" id="completion1" value="option1">
+                            Just getting started
+                        </label>
                     </div>
-                    <div class="form-bottom row" style="display: flex;">
-                        <fieldset id="completion" class="form-group col-md-6">
-                            <label>Ideal Project Completion:</label>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="completion" id="completion1" value="option1">
-                                    Last week!
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="completion" id="completion2" value="option2">
-                                    Within 1 - 2 months
-                                </label>
-                            </div>
-                            <div class="form-check disabled">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="completion" id="completion3" value="option3">
-                                    Within 3+ months
-                                </label>
-                            </div>
-                        </fieldset>
-                        <fieldset id="projectneed" class="form-group col-md-6">
-                            <label>Project Need:</label>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="projectneed" id="projectneed1" value="option1">
-                                    New Website
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="projectneed" id="projectneed2" value="option2">
-                                    New functionality on existing website
-                                </label>
-                            </div>
-                            <div class="form-check disabled">
-                                <label class="form-check-label">
-                                    <input class="form-check-input" type="radio" name="projectneed" id="projectneed3" value="option3">
-                                    Design of existing website
-                                </label>
-                            </div>
-                        </fieldset>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="completion" id="completion2" value="option2">
+                            Need a new marketing strategy
+                        </label>
                     </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
-        </section>
-        <%= link_to process_path, style: 'color: black; text-decoration: none;' do %>
-            <section style="display: flex;">
-                <div style=" flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 0 3rem; border-right: 2px dotted black;">
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="completion" id="completion3" value="option3">
+                            Need a new marketing company
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset id="projectneed" class="form-group col-md-6">
+                    <label>What product are you most interested in?</label>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="projectneed" id="projectneed1" value="option1">
+                            Branding & Strategy
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="projectneed" id="projectneed2" value="option2">
+                            Search Engine Optimization (SEO)
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="projectneed" id="projectneed3" value="option3">
+                            Pay-Per-Click (PPC)
+                        </label>
+                    </div>
+                    <div class="form-check disabled">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="radio" name="projectneed" id="projectneed4" value="option3">
+                            Social Media Marketing
+                        </label>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="next-step">
+                <div class="next-step-1">
                     <h2>Next Step:</h2>
-                    <p>Click here to see our full process from start to finish.</p>
                 </div>
-                <div style="flex: 2; display: flex; flex-direction: column; align-items: center; padding: 0 5rem;">
-                    <div style="font-size: 5rem;"><i class="fa fa-phone" aria-hidden="true"></i></div>
-                    <h4>Initial Consultation</h4>
-                    <p>We'll review your website goals, target audience, talk design and budget to make sure we're the right company for you.</p>
+                <div class="next-step-2">
+                    <div><i class="fa fa-phone" aria-hidden="true"></i></div>
                 </div>
-            </section>
-        <% end %>
-    </main>
+                <div class="next-step-3">
+                    <h3>Initial Consultation:</h3>
+                    <p>We'll reach out to you within 24 hours to discuss your marketing goals and needs.</p>    
+                </div>
+            </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
 </div>
+

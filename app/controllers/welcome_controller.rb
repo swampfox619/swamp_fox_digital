@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
   def index
   end
   
-  def seo
+  def services
   end
   
 end

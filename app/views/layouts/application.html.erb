@@ -10,20 +10,26 @@
       <title>FlexBox</title>
   </head>
   <body>
-    <%= yield %>
-    <footer>
-      <%= link_to image_tag('logo-half', class: 'logo'), root_path %>
-      <ul>
-          <li><a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></li>
-          <li><a href="www.yelp.com" style="font-size: 2rem;"><i class="fa fa-yelp" aria-hidden="true"></i></li>
-          <li><a href="www.google.com"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
-          <li><%= link_to 'About', about_path %></li>
-          <li><a href="#">Our Work</a></li>
-          <li><%= link_to 'Website Packages', products_path %></li>
-          <li><%= link_to 'Our Process', process_path %></li>
-          <li><%= link_to 'Blog', blogs_path %></li>
-          <li><%= link_to 'Contact Us', contact_path %></li>
-      </ul>
-    </footer>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <%= link_to image_tag('logo-half', class: 'logo'), root_path %>
+        </div>
+        <ul class="links">
+            <li><%= link_to 'About', about_path %></li>
+            <li><%= link_to 'Services', services_path %></li>
+            <li><%= link_to 'Blog', blogs_path %></li>
+            <li><%= link_to 'Contact', contact_path %></li>
+        </ul>
+        <ul class="social">
+            <li><a href="www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+            <li><a href="www.yelp.com" style="font-size: 2rem;"><i class="fa fa-yelp" aria-hidden="true"></i></li>
+            <li><a href="www.google.com"><i class="fa fa-google-plus-official" aria-hidden="true"></i></a></li>
+        </ul>
+      </div>
+    </header>
+    <div class="main-content">
+      <%= yield %>
+    </div>
   </body>
 </html>
