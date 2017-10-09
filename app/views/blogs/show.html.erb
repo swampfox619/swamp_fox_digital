@@ -1,9 +1,20 @@
-
+<%= content_for :head do %>
+    <%= tag :meta, property: "fb:app_id",      content: 360239074415686 %>
+    <%= tag :meta, property: "og:url",         content: "https://general-issue-digital-clone-lewvine.c9users.io/blogs/#{@blog.id}" %>
+    <%= tag :meta, property: "og:type",        content: "article" %>
+    <%= tag :meta, property: "og:title",       content: "The G.I. Blog | #{@blog.title}" %>
+    <%= tag :meta, property: "og:description", content: truncate(@blog.body, :length => 250, :escape => false) %>
+    <%= tag :meta, property: "og:image",    content: "https://general-issue-digital-clone-lewvine.c9users.io/assets/logo-double.png" %>
+<% end %>
 <div class="container">
     <main>
         <section class="blog-show">
             <h2><%= "#{@blog.title}" %></h2><span><%= link_to "Edit", edit_blog_path(@blog.id) %></span>
             <h4><%= "Published: #{@blog.created_at.strftime("%B %e, %Y")}" %></h4>
+            <div style="padding: 1rem;" class="fb-like" data-href="https://general-issue-digital-clone-lewvine.c9users.io/"
+                data-width="50" data-layout="button" data-action="like" data-size="small" 
+                data-show-faces="false" data-share="true">
+            </div>
             <div class="blog-content">
                 <%= markdown(@blog.body) %>
             </div>
