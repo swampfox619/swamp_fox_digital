@@ -1,22 +1,8 @@
-<%= content_for :head do %>
-    <%= tag :meta, property: "fb:app_id",       content: 360239074415686 %>
-    <%= tag :meta, property: "og:url",          content: "https://generalissuehomepage.herokuapp.com/" %>
-    <%= tag :meta, property: "og:type",         content: "website" %>
-    <%= tag :meta, property: "og:title",        content: "General Issue | Digital Marketing" %>
-    <%= tag :meta, property: "og:description",  content: "A digital marketing agency specializing in helping veteran-owned small businesses
-                                                      with Marketing Strategy, Search Engine Optimization (SEO) & Pay-Per-Click (PPC).  10% of our profits
-                                                      go to Veteran's Organizations." %>
-    <%= tag :meta, property: "og:image",        content: "https://generalissuehomepage.herokuapp.com/assets/logo-double.png" %>
-<% end %>
 <h1 class="page-heading">The GI Blog:  
 <!--<span><%= link_to "New Blog post", new_blog_path, class: 'btn btn-primary' %></span>-->
 </h1>
 <p style="width: 90%; margin: 0 auto; padding: 1rem;">The GI Blog focuses on the latest online marketing developments for small businesses and 
 how you can leverage proven strategies and insights to maximize the return on your marketing dollar.</p>
-<div style="width: 90%; margin: 0 auto; padding: 1rem 4rem" class="fb-like" data-href= "https://generalissuehomepage.herokuapp.com/blogs/"
-    data-width="50" data-layout="button" data-action="like" data-size="small" 
-    data-show-faces="false" data-share="true">
-</div>
 <div class="blog">
     <div class="blog-latest">
         <% @blogs.reverse.each do |blog| %>
