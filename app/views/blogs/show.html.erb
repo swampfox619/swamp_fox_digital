@@ -1,10 +1,10 @@
 <%= content_for :head do %>
     <%= tag :meta, property: "fb:app_id",      content: 360239074415686 %>
-    <%= tag :meta, property: "og:url",         content: "https://general-issue-digital-clone-lewvine.c9users.io/blogs/#{@blog.id}" %>
+    <%= tag :meta, property: "og:url",         content: "https://generalissuehomepage.herokuapp.com/blogs/#{@blog.id}" %>
     <%= tag :meta, property: "og:type",        content: "article" %>
     <%= tag :meta, property: "og:title",       content: "The G.I. Blog | #{@blog.title}" %>
     <%= tag :meta, property: "og:description", content: truncate(@blog.body, :length => 250, :escape => false) %>
-    <%= tag :meta, property: "og:image",    content: "https://general-issue-digital-clone-lewvine.c9users.io/assets/logo-double.png" %>
+    <%= tag :meta, property: "og:image",       content: "https://generalissuehomepage.herokuapp.com/assets/logo-double.png" %>
 <% end %>
 <div class="container">
     <main>
