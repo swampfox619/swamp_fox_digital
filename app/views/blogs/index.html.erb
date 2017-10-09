@@ -12,29 +12,30 @@ how you can leverage proven strategies and insights to maximize the return on yo
                 <h4>Published on: <%= blog.created_at.strftime("%B %e, %Y") %></h4>
             </div>
             <div class="blog-show">
-                <%= markdown(blog.body) %>
+                <%= markdown(truncate(blog.body, :length => 1000, :escape => false)) %>
+                <%= link_to "Read More", blog_path(blog.id) %>
             </div>
         </div>
         <% end %>
-        <div class="blog-admin-panel">
-            <h2>Blog Admin Panel:</h2>
-            <table>
-                <tr>
-                    <th id="blog-title">Title:</th>
-                    <th id="blog-date">Date:</th>
-                    <th id="blog-show">Show:</th>
-                    <th id="blog-edit">Edit:</th>
-                    <th id="blog-delete">Delete:</th>
-                </tr>
-                <% @blogs.each do |blog| %>
-                <tr>
-                   <td><%= blog.title %></td>
-                   <td><%= blog.created_at.strftime("%B %e, %Y") %></td>
-                   <td><%= link_to "Show", blog_path(blog.id) %></td>
-                   <td><%= link_to "Edit", edit_blog_path(blog.id) %></td>
-                   <td><%= link_to "Destroy", blog_path(blog.id), :method => :delete, :confirm => "Are you sure?" %></td>
-                </tr>
-                <% end %>
-            </table>
-        </div>
+        <!--<div class="blog-admin-panel">-->
+        <!--    <h2>Blog Admin Panel:</h2>-->
+        <!--    <table>-->
+        <!--        <tr>-->
+        <!--            <th id="blog-title">Title:</th>-->
+        <!--            <th id="blog-date">Date:</th>-->
+        <!--            <th id="blog-show">Show:</th>-->
+        <!--            <th id="blog-edit">Edit:</th>-->
+        <!--            <th id="blog-delete">Delete:</th>-->
+        <!--        </tr>-->
+        <!--        <% @blogs.each do |blog| %>-->
+        <!--        <tr>-->
+        <!--           <td><%= blog.title %></td>-->
+        <!--           <td><%= blog.created_at.strftime("%B %e, %Y") %></td>-->
+        <!--           <td><%= link_to "Show", blog_path(blog.id) %></td>-->
+        <!--           <td><%= link_to "Edit", edit_blog_path(blog.id) %></td>-->
+        <!--           <td><%= link_to "Destroy", blog_path(blog.id), :method => :delete, :confirm => "Are you sure?" %></td>-->
+        <!--        </tr>-->
+        <!--        <% end %>-->
+        <!--    </table>-->
+        <!--</div>-->
 </div>

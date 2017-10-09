@@ -199,6 +199,10 @@ table {
                 list-style: initial;
                 margin-left: 1rem;
             }
+            a{
+                display: block;
+                padding-top: .5rem;
+            }
         }
     }
 
@@ -313,6 +317,9 @@ table {
         .blog-show{
             padding: 2rem;
         }
+    }
+    .blog-show{
+        padding: 2rem;
     }
     .blog-admin-panel{
         width: 100%;

@@ -6,26 +6,15 @@
     <%= tag :meta, property: "og:description", content: truncate(@blog.body, :length => 250, :escape => false) %>
     <%= tag :meta, property: "og:image",       content: "https://generalissuehomepage.herokuapp.com/assets/logo-double.png" %>
 <% end %>
-<div class="container">
-    <main>
-        <section class="blog-show">
-            <h2><%= "#{@blog.title}" %></h2><span><%= link_to "Edit", edit_blog_path(@blog.id) %></span>
+<div class="blog">
+        <div class="blog-show">
+            <h2><%= "#{@blog.title}" %></h2>
+            <!--<span><%= link_to "Edit", edit_blog_path(@blog.id) %></span>-->
             <h4><%= "Published: #{@blog.created_at.strftime("%B %e, %Y")}" %></h4>
             <%= div_for(@blog, class: 'fb-like', data: { href: 'https://generalissuehomepage.herokuapp.com/blogs/' + @blog.id.to_s, width: 50, layout: 'button',
                 action: 'like', size: 'small', show_faces: 'false', share: 'true'}) %>
-                
-            <!--<div style="padding: 1rem;" class="fb-like" data-href="https://generalissuehomepage.herokuapp.com/blogs/#{@blog.id}"-->
-            <!--    data-width="50" data-layout="button" data-action="like" data-size="small" -->
-            <!--    data-show-faces="false" data-share="true">-->
-            <!--</div>-->
             <div class="blog-content">
                 <%= markdown(@blog.body) %>
             </div>
-            <div class="blog-nav">
-                <h3><%= link_to("Previous", @blog.previous) %></h3>
-                <h3><%= link_to("Index", blogs_path) %></h3>
-                <h3><%= link_to("Next", @blog.next) %></h3>
-            </div>
-        </section>
-    </main>
+        </div>
 </div> 

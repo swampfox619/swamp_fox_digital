@@ -19,6 +19,7 @@
         <h2>About</h2>
         <p>General Issue exists to serve veteran-owned small businesses.  From SEO to PPC and beyond, we're here to help you grow your own
         slice of the American dream.  Oh, and we also give back 10% of our profits to veteran's causes. </p>
+        <%= link_to('Read more', about_path) %>
     </div>
     <div class="home-third">
         <h2>Services</h2>
@@ -29,16 +30,19 @@
             <li>Pay-Per-Click (PPC) Advertising</li>
             <li>Social Media Advertising</li>
         </ul>
+        <%= link_to('Read more', services_path) %>
     </div>
     <div class="home-third">
         <h2>The G.I. Blog:</h2>
         <h3><%=  "\"#{Blog.last.title}:\"" %></h3>
         <br>
-        <p><%= markdown(truncate(Blog.last.body, length: 200){"[read more](#{blogs_path})"}) %></p>
+        <p><%= markdown(truncate(Blog.last.body, length: 200)) %></p>
+        <%= link_to('Read more', blogs_path) %>
     </div>
     <div class="home-third">
         <h2>Contact</h2>
         <p>When you're ready to get started, feel free to reach out to us.  The next step would be our free-initial consultation.</p>
+        <%= link_to('Contact us', contact_path) %>
     </div>
 </div>
 <div class="home-testimonial">
